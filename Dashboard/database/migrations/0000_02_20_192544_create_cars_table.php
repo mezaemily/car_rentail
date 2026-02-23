@@ -14,9 +14,7 @@ return new class extends Migration
     Schema::create('cars', function (Blueprint $table) {
     $table->id();
 
-    $table->foreignId('brand_id')
-          ->constrained('brands')
-          ->cascadeOnDelete();
+    $table->foreignId('brand_id')->on('id')->references('brands');
 
     $table->string('model');
     $table->year('year');
