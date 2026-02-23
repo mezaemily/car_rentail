@@ -15,11 +15,22 @@ class BrandSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('brands')->insert([
-            ['name' => 'Toyota', 'img' => 'toyota.png', 'created_at' => now(), 'updated_at' => now()],
-            ['name' => 'Honda', 'img' => 'honda.png', 'created_at' => now(), 'updated_at' => now()],
-            ['name' => 'BMW', 'img' => 'bmw.png', 'created_at' => now(), 'updated_at' => now()],
-        ]);
+       DB::table('brands')->insert([
+    ['name' => 'Nissan',
+     'img' => 'nissan.png', 
+     'created_at' => now(), 
+     'updated_at' => now()],
+
+    ['name' => 'Honda',
+     'img' => 'honda.png', 
+     'created_at' => now(), 
+     'updated_at' => now()],
+
+    ['name' => 'BMW', 
+     'img' => 'bmw.png', 
+     'created_at' => now(),
+     'updated_at' => now()],
+]);
     }
 }
  

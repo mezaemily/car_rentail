@@ -13,8 +13,8 @@ class UserSeeder extends Seeder
     {
         DB::table('users')->insert([
             [
-                'name' => 'Juan Perez',
-                'email' => 'juan@example.com',
+                'name' => 'Pablo',
+                'email' => 'pablo@gmail.com',
                 'password' => Hash::make('12345678'),
                 'loyalty_points' => 50,
                 'loyalty_level_id' => 1,
@@ -22,8 +22,8 @@ class UserSeeder extends Seeder
                 'updated_at' => now()
             ],
             [
-                'name' => 'Maria Lopez',
-                'email' => 'maria@example.com',
+                'name' => 'Jaime ',
+                'email' => 'jaime@gmail.com',
                 'password' => Hash::make('12345678'),
                 'loyalty_points' => 200,
                 'loyalty_level_id' => 2,

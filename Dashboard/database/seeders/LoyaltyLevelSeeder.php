@@ -15,32 +15,32 @@ class LoyaltyLevelSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('loyalty_levels')->insert([
-            [
-                'name' => 'Bronze',
-                'min_points' => 0,
-                'discount_percentage' => 0,
-                'free_extra_hours' => 0,
-                'created_at' => now(),
-                'updated_at' => now()
-            ],
-            [
-                'name' => 'Silver',
-                'min_points' => 100,
-                'discount_percentage' => 5,
-                'free_extra_hours' => 1,
-                'created_at' => now(),
-                'updated_at' => now()
-            ],
-            [
-                'name' => 'Gold',
-                'min_points' => 300,
-                'discount_percentage' => 10,
-                'free_extra_hours' => 2,
-                'created_at' => now(),
-                'updated_at' => now()
-            ]
-        ]);
+  DB::table('loyalty_levels')->insert([
+    [
+        'name' => 'Basic',
+        'min_points' => 0,
+        'discount_percentage' => 0,
+        'free_extra_hours' => 0,
+        'created_at' => now(),
+        'updated_at' => now()
+    ],
+    [
+        'name' => 'Premium',
+        'min_points' => 150,
+        'discount_percentage' => 7,
+        'free_extra_hours' => 1,
+        'created_at' => now(),
+        'updated_at' => now()
+    ],
+    [
+        'name' => 'Elite',
+        'min_points' => 400,
+        'discount_percentage' => 15,
+        'free_extra_hours' => 3,
+        'created_at' => now(),
+        'updated_at' => now()
+    ]
+]);
     }
 }
  
