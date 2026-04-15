@@ -103,7 +103,25 @@ class CarController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+            $car = Car::find($id);
+
+    if ($car == null) {
+        return response()->json([
+            "message" => "auto no encontrado"
+        ], 404);
+    }
+
+    $request->validate([
+        'status' => 'required|string|in:available,rented,maintenance',
+    ]);
+
+    $car->status = $request->status;
+    $car->save();
+
+    return response()->json([
+        "data" => $car,
+        "status" => "success"
+    ], 200);
     }
 
     /**

@@ -58,9 +58,9 @@ class RentalController extends Controller
         $rental->total_amount = $request->total_amount;
         $rental->status       = $request->status;
 
-         $rental->user_id  = $request->user_id;
-        $rental->car_id  = $request->car_id;
-        $rental->driver_id = $request->driver_id;
+        $rental->user_id   = $request->user;
+$rental->car_id    = $request->car;
+$rental->driver_id = $request->driver;
         
 
         $rental->save();
@@ -100,7 +100,25 @@ class RentalController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+           $rental = Rental::find($id);
+
+    if ($rental == null) {
+        return response()->json([
+            "message" => "renta no encontrada"
+        ], 404);
+    }
+
+    $request->validate([
+        'status' => 'required|string|in:pending,active,completed,cancelled',
+    ]);
+
+    $rental->status = $request->status;
+    $rental->save();
+
+    return response()->json([
+        "data" => $rental,
+        "status" => "success"
+    ], 200);
     }
 
     /**

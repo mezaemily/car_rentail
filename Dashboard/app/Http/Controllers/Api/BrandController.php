@@ -81,8 +81,26 @@ class BrandController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+         $rental = Rental::find($id);
+
+    if ($rental == null) {
+        return response()->json([
+            "message" => "renta no encontrada"
+        ], 404);
     }
+
+    $request->validate([
+        'status' => 'required|string|in:pending,active,completed,cancelled',
+    ]);
+
+    $rental->status = $request->status;
+    $rental->save();
+
+    return response()->json([
+        "data" => $rental,
+        "status" => "success"
+    ], 200);
+}
 
     /**
      * Remove the specified resource from storage.
