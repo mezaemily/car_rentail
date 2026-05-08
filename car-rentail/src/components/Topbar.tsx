@@ -1,5 +1,6 @@
 export default function Topbar(){
-    return(<>
+    return(
+    <>
     <div className="topbar px-4 d-flex align-items-center justify-content-between border-bottom flex-shrink-0">
                 <div className="d-flex gap-4 text-secondary fs-sm fw-medium">
                     <div><i className="fa-regular fa-clock me-2"></i>01:48 PM (UTC -7)</div>
@@ -13,6 +14,5 @@ export default function Topbar(){
                         className="rounded-circle border border-2 border-white shadow-sm" width="36" height="36" />
                 </div>
             </div>
-    
     </>)
 }
