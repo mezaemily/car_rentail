@@ -4,6 +4,7 @@ import Car_1 from "../components/Car_1";
 import Filter from "../components/Filter";
 
 export default function Dashboard() {
+    
     return (<>
     <div className="d-flex vh-100 overflow-hidden">
         {/*  Sidebar Navigation  */}
@@ -36,6 +37,9 @@ export default function Dashboard() {
  
                     {/*  CAR 1  */}
                     <Car_1/>
+                    {
+                        /*CardSubtitle.map((item:Car)=>)
+                    }
  
                     {/*  CAR 2  */}
                     <div className="car-card">

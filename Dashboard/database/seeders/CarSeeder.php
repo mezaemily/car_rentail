@@ -21,6 +21,10 @@ class CarSeeder extends Seeder
                 'model' => 'Corolla',
                 'year' => 2022,
                 'color' => 'Blanco',
+                
+                'img'=>'car.jpg',
+                'price'=>24.25,
+
                 'license_plate' => 'ABC123',
                 'mileage' => 15000,
                 'lat' => 31.6904,
@@ -37,6 +41,10 @@ class CarSeeder extends Seeder
                 'model' => 'X5',
                 'year' => 2023,
                 'color' => 'Negro',
+
+                'img'=>'car.jpg',
+                'price'=>33.23,
+
                 'license_plate' => 'XYZ789',
                 'mileage' => 8000,
                 'lat' => 31.7000,
